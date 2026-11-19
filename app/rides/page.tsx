@@ -64,9 +64,7 @@ export default function RidesPage() {
             <div key={ride.id} className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-5">
               <div className="flex justify-between items-start mb-3">
                 <div>
-                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                    ride.type === "instant" ? "bg-gold/20 text-gold" : "bg-blue-500/20 text-blue-400"
-                  }`}>
+                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${ride.type === "instant" ? "bg-gold/20 text-gold" : "bg-blue-500/20 text-blue-400"}`}>
                     {ride.type === "instant" ? "Instant" : "Scheduled"}
                   </span>
                   <span className="ml-2 text-xs text-zinc-500">
