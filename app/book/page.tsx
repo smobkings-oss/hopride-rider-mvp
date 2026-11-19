@@ -24,7 +24,6 @@ export default function BookPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    // Simple mock fare based on length of addresses
     const base = 8.5;
     const distance = (pickup.length + dropoff.length) * 0.15;
     setFare(Math.round((base + distance) * 100) / 100);
@@ -91,22 +90,14 @@ export default function BookPage() {
           <button
             type="button"
             onClick={() => setRideType("instant")}
-            className={`flex-1 py-3 rounded-xl border transition ${
-              rideType === "instant"
-                ? "border-gold bg-gold/10 text-gold"
-                : "border-zinc-700 text-zinc-400"
-            }`}
+            className={`flex-1 py-3 rounded-xl border transition ${rideType === "instant" ? "border-gold bg-gold/10 text-gold" : "border-zinc-700 text-zinc-400"}`}
           >
             Instant
           </button>
           <button
             type="button"
             onClick={() => setRideType("scheduled")}
-            className={`flex-1 py-3 rounded-xl border transition ${
-              rideType === "scheduled"
-                ? "border-gold bg-gold/10 text-gold"
-                : "border-zinc-700 text-zinc-400"
-            }`}
+            className={`flex-1 py-3 rounded-xl border transition ${rideType === "scheduled" ? "border-gold bg-gold/10 text-gold" : "border-zinc-700 text-zinc-400"}`}
           >
             Scheduled
           </button>
